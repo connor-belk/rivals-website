@@ -1,3 +1,10 @@
+import NavButtonHome from "@/components/NavButtonHome";
+
 export default function Home() {
-  return <main>Rivals Website Starter</main>;
+  return (
+    <main>
+      <NavButtonHome navigation="rivals" />
+      <NavButtonHome navigation="W2W" />
+    </main>
+  );
 }
