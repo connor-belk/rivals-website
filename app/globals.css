@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  height: fit-content;
+  /* height: fit-content; */
   scroll-behavior: smooth;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
