@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { RxHamburgerMenu } from "react-icons/rx";
 import MobileMenu from "./MobileMenu";
 
 export default async function Navbar() {
@@ -16,7 +15,12 @@ export default async function Navbar() {
           height={70}
           className="text-slate-200"
         /> */}
-        <Link href={"/"}>Rivals Webpage</Link>
+        <Link href={"/"} className="hidden md:block">
+          Rivals Webpage
+        </Link>
+        <Link href={"/"} className="md:hidden">
+          <Image src={"/racecar.png"} alt={"logo"} width={150} height={50} />
+        </Link>
       </h1>
       <div>
         <MobileMenu />

@@ -16,13 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-black">
       <body>
         <Navbar />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
-      <SpeedInsights />
     </html>
   );
 }

@@ -4,7 +4,7 @@ import { FaDiscord } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-slate-800 text-slate-200 text-center pt-3 pb-1">
+    <footer className="w-full bg-gradient-to-r from-slate-800 to-slate-950  text-slate-200 text-center pt-3 pb-1">
       <h6 className="md:w-[50%] font-bold text-xl">Site Map</h6>
       <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1">
         <ul className="flex flex-col items-center ">
