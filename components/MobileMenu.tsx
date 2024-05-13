@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function MobileMenu() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const session = true; // This block for authorization is not yet implemented
+  const session = false; // This block for authorization is not yet implemented
 
   function handleMobileMenu() {
     setMobileMenu(!mobileMenu);
@@ -34,7 +34,7 @@ export default function MobileMenu() {
       >
         {/* <p className="text-center text-3xl font-thin">Navigation Menu</p> */}
         <TfiClose
-          className="absolute top-0 right-0 text-5xl m-4"
+          className="absolute top-0 right-0 text-5xl m-4 cursor-pointer"
           onClick={() => handleMobileMenu()}
         />
         <ul className="h-screen flex flex-col justify-center items-center text-5xl font-thin text-slate-300 gap-9">

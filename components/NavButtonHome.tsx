@@ -20,7 +20,7 @@ export default function NavButtonHome({
           alt={title}
           className="absolute z-0 object-cover overflow-hidden h-[100%] w-[100%] rounded-2xl"
         />
-        <div className="bg-black opacity-50 absolute z-5 w-full h-full rounded-2xl" />
+        <div className="bg-black opacity-50 absolute z-5 w-full h-full rounded-2xl " />
         <p className="z-10 items-center justify-center font-sans font-extrabold text-6xl text-white">
           {title}
         </p>
