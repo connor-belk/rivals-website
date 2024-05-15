@@ -9,7 +9,7 @@ export default function WheelToWheelPage() {
       <h1 className="hidden md:block text-5xl text-slate-200 font-extrabold tracking-wider text-center mt-2">
         Wheel to Wheel
       </h1>
-      <h1 className="text-4xl text-slate-200 font-extrabold tracking-wider text-center mt-2">
+      <h1 className="md:hidden text-4xl text-slate-200 font-extrabold tracking-wider text-center mt-2">
         Wheel to Wheel
       </h1>
       <div className="w-full flex flex-col justify-center items-center mt-4 mb-8">
