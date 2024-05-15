@@ -16,7 +16,7 @@ export default async function Navbar() {
           className="text-slate-200"
         /> */}
         <Link href={"/"} className="hidden md:block">
-          Rivals Webpage
+          Rivals
         </Link>
         <Link href={"/"} className="md:hidden">
           <Image src={"/racecar.png"} alt={"logo"} width={150} height={50} />

@@ -12,6 +12,7 @@ export default function NavButtonHome({
   return (
     <Link
       href={`/${navigation}`}
+      prefetch={true}
       className="grow cursor-pointer hover:scale-105 transition-all duration-150"
     >
       <div className="relative bg-gradient-to-r from-blue-400 to-cyan-400 min-h-[15rem] my-4 mx-2 rounded-2xl items-center justify-center flex">

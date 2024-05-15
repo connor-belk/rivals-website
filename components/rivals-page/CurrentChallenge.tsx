@@ -1,6 +1,6 @@
 export default function CurrentChallenge() {
   return (
-    <div className="text-slate-200 h-[30vh] md:h-[40vh] m-2 bg-slate-500 rounded-3xl relative">
+    <div className="text-slate-200 h-[50vh] md:h-[40vh] m-2 bg-slate-500 rounded-3xl relative">
       {/* <img src="#" alt="current challenge track/car hidden" />  */}
       <div className="absolute w-full h-full bg-black/50 rounded-3xl">
         <div className="w-full h-full flex flex-col justify-center items-center gap-2">

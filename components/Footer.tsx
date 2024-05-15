@@ -18,27 +18,27 @@ export default function Footer() {
             <Link href={"/wheel-to-wheel"}>Wheel to Wheel</Link>
           </li>
           <li>
-            <Link href={"/about"}>About Us</Link>
+            <Link href={"#"}>About Us</Link>
           </li>
           <li>
-            <Link href={"contact"}>Contact</Link>
+            <Link href={"#"}>Contact</Link>
           </li>
         </ul>
         <ul className="flex flex-col items-center ">
           <li>
-            <Link href={"/"}>Seasons</Link>
+            <Link href={"#"}>Seasons</Link>
           </li>
           <li>
-            <Link href={"/wheel-to-wheel/teams"}>Teams</Link>
+            <Link href={"#"}>Teams</Link>
           </li>
           <li>
-            <Link href={"/dashboard"}>Account</Link>
+            <Link href={"#"}>Account</Link>
           </li>
           <li>
-            <Link href={"/admin"}>Admin Page</Link>
+            <Link href={"#"}>Admin Page</Link>
           </li>
           <li>
-            <Link href={"/privacy"}>Privacy Policy</Link>
+            <Link href={"#"}>Privacy Policy</Link>
           </li>
         </ul>
         <ul className="self-center">
@@ -68,7 +68,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <p className="text-sm">&copy; 2024 Rivals Webpage</p>
+      <p className="text-sm mt-4">&copy; 2024 Rivals Webpage</p>
     </footer>
   );
 }
