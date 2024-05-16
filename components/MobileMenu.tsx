@@ -59,7 +59,7 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li>
-            <Link href={"#"} onClick={() => handleMobileMenu()}>
+            <Link href={"/contact"} onClick={() => handleMobileMenu()}>
               Contact
             </Link>
           </li>
@@ -90,7 +90,7 @@ export default function MobileMenu() {
             <Link href={"/about"}>About Us</Link>
           </li>
           <li>
-            <Link href={"contact"}>Contact</Link>
+            <Link href={"/contact"}>Contact</Link>
           </li>
           {session ? (
             <li className="w-10 h-10 bg-slate-400 rounded-full cursor-pointer"></li>

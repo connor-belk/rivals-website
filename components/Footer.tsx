@@ -21,7 +21,7 @@ export default function Footer() {
             <Link href={"#"}>About Us</Link>
           </li>
           <li>
-            <Link href={"#"}>Contact</Link>
+            <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>
         <ul className="flex flex-col items-center ">
