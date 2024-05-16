@@ -54,7 +54,7 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li>
-            <Link href={"#"} onClick={() => handleMobileMenu()}>
+            <Link href={"/about"} onClick={() => handleMobileMenu()}>
               About Us
             </Link>
           </li>

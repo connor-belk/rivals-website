@@ -18,7 +18,7 @@ export default function Footer() {
             <Link href={"/wheel-to-wheel"}>Wheel to Wheel</Link>
           </li>
           <li>
-            <Link href={"#"}>About Us</Link>
+            <Link href={"/about"}>About Us</Link>
           </li>
           <li>
             <Link href={"/contact"}>Contact</Link>
