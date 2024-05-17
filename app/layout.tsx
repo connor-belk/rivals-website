@@ -3,6 +3,8 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AuthCheck from "@/components/AuthCheck";
+import AuthProvider from "@/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Rivals",
@@ -16,13 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-black">
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
-        <SpeedInsights />
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en" className="bg-black">
+        <body>
+          <AuthCheck />
+          <Navbar />
+          {children}
+          <Footer />
+          <SpeedInsights />
+        </body>
+      </html>
+    </AuthProvider>
   );
 }
