@@ -2,12 +2,11 @@ import { auth } from "@/auth";
 
 export default async function AuthCheck() {
   const session = await auth();
-  if (session) {
-    // console.log("session", session);
-  } else {
-    // console.log("no session");
-  }
-  //   const session = false; // This block for authorization is not yet implemented
+  // if (session) {
+  //   console.log("session", session);
+  // } else {
+  //   console.log("no session");
+  // }
 
   return (
     <>

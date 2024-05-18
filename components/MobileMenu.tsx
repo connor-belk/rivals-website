@@ -1,30 +1,18 @@
-// "use client";
-
-// import { useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { TfiClose } from "react-icons/tfi";
 import Link from "next/link";
 import SignInBtn from "./auth/SignInBtn";
 import MobileSlider from "./MobileSlider";
 import { auth } from "@/auth";
 import SignOutBtn from "./auth/SignOutBtn";
+import MobileAuthBtns from "./auth/MobileAuthBtns";
 
 export default async function MobileMenu() {
-  // const [mobileMenu, setMobileMenu] = useState(false);
-
   const session = await auth(); // This block for authorization is not yet implemented
 
-  // function handleMobileMenu() {
-  //   // setMobileMenu(!mobileMenu);
-  //   // document.getElementById("mobileMenuContainer")?.classList.toggle("hidden");
-
-  //   document
-  //     .getElementById("mobileMenuContainer")
-  //     ?.classList.toggle("translate-x-full");
-  // }
   return (
     <>
-      <MobileSlider />
+      <MobileSlider>
+        <MobileAuthBtns />
+      </MobileSlider>
       <div className="hidden md:block">
         <ul className="hidden md:flex gap-5 items-center justify-center">
           <li>

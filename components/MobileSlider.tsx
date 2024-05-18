@@ -4,7 +4,11 @@ import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
 
-export default function MobileSlider() {
+export default function MobileSlider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   function handleMobileMenu() {
     // setMobileMenu(!mobileMenu);
     // document.getElementById("mobileMenuContainer")?.classList.toggle("hidden");
@@ -13,8 +17,6 @@ export default function MobileSlider() {
       .getElementById("mobileMenuContainer")
       ?.classList.toggle("translate-x-full");
   }
-
-  const session = false; // This block for authorization is not yet implemented
 
   return (
     <>
@@ -61,16 +63,7 @@ export default function MobileSlider() {
               Contact
             </Link>
           </li>
-          {session ? (
-            <li className="w-20 h-20 bg-slate-400 rounded-full cursor-pointer"></li>
-          ) : (
-            <li
-              className="border border-transparent bg-gradient-to-r from-blue-400 to-cyan-400 font-bold rounded-full text-slate-950 px-16 py-3 hover:scale-105 transition-all duration-150 flex items-center justify-center cursor-pointer text-4xl"
-              onClick={() => handleMobileMenu()}
-            >
-              <Link href={"/login"}>Login</Link>
-            </li>
-          )}
+          {children}
         </ul>
       </div>
     </>
