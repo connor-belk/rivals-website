@@ -28,7 +28,7 @@ export default function CookiesPage() {
         <p>
           These cookies provide anonymous information about how visitors use our
           website. They help us analyze traffic patterns, identify popular
-          pages, and improve our website's performance and content.
+          pages, and improve our website&apos;s performance and content.
         </p>
       </section>
       <section className="mt-5">
@@ -53,10 +53,10 @@ export default function CookiesPage() {
         <h2 className="text-xl font-bold">Contact Information</h2>
         <p>
           If you have any questions or concerns about our cookie policy, please
-          use our contact form with the subject line "Cookie Policy Inquiry" to
-          get in touch with us. We are committed to protecting your privacy and
-          will respond promptly to any inquiries regarding our privacy
-          practices.
+          use our contact form with the subject line &quot;Cookie Policy
+          Inquiry&quot; to get in touch with us. We are committed to protecting
+          your privacy and will respond promptly to any inquiries regarding our
+          privacy practices.
         </p>
       </section>
       <div className="w-full text-center mt-4">

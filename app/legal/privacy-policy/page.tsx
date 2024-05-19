@@ -34,9 +34,10 @@ export default function PrivacyPolicyPage() {
       </section>
       <section className="mt-4">
         If you have any questions or concerns about our privacy policy, please
-        use our contact form with the subject line "Privacy Policy Inquiry" to
-        get in touch with us. We are committed to protecting your privacy and
-        will respond promptly to any inquiries regarding our privacy practices.
+        use our contact form with the subject line &quot;Privacy Policy
+        Inquiry&quot; to get in touch with us. We are committed to protecting
+        your privacy and will respond promptly to any inquiries regarding our
+        privacy practices.
       </section>
       <div className="w-full text-center mt-4">
         <Link href={"/legal/cookies"} className="underline w-full text-center">
