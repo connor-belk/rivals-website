@@ -24,13 +24,12 @@ import { Toggle } from "@/components/ui/toggle";
 import { useState } from "react";
 
 export default function PreviousResults() {
-
   const [selectedWeek, setSelectedWeek] = useState("week-5");
-  const [displayedWeek, setDisplayedWeek] = useState(selectedWeek);
+  // const [displayedWeek, setDisplayedWeek] = useState(selectedWeek);
 
   const handleSelectChange = (e: any) => {
     setSelectedWeek(e.target.value);
-    setDisplayedWeek(selectedWeek);
+    // setDisplayedWeek(selectedWeek);
   };
 
   return (
@@ -41,7 +40,6 @@ export default function PreviousResults() {
           id="cars"
           className="rounded-full w-full px-2 py-1 mb-4 bg-black text-2xl text-center"
           onChange={handleSelectChange}
-          
         >
           <option value="week-5">Week 5</option>
           <option value="week-4">Week 4</option>
@@ -54,7 +52,9 @@ export default function PreviousResults() {
           <TableHeader>
             <TableRow className="border">
               <TableHead className="text-lg md:text-xl">Pos</TableHead>
-              <TableHead className="w-content text-lg md:text-xl">Driver</TableHead>
+              <TableHead className="w-content text-lg md:text-xl">
+                Driver
+              </TableHead>
               <TableHead className="text-lg md:text-xl">Time</TableHead>
               <TableHead className="text-right w-content text-lg">PI</TableHead>
             </TableRow>
@@ -108,71 +108,76 @@ export default function PreviousResults() {
 
       <div className="hidden md:flex flex-col gap-2 m-2 w-full mb-10">
         <div className="text-white mb-3 px-4 py-2 text-center">
-          <select onChange={handleSelectChange} className="text-center bg-black min-w-[50%] border px-4 py-3 rounded-full text-xl">
-            <option value={'week-5'}>Week 5</option>
-            <option value={'week-4'}>Week 4</option>
-            <option value={'week-3'}>Week 3</option>
-            <option value={'week-2'}>Week 2</option>
-            <option value={'week-1'}>Week 1</option>
+          {/* <h3 className="text-3xl font-bold">{displayedWeek}</h3> */}
+          <select
+            onChange={handleSelectChange}
+            className="text-center bg-black min-w-[50%] border px-4 py-3 rounded-full text-xl"
+          >
+            <option value={"week-5"}>Week 5</option>
+            <option value={"week-4"}>Week 4</option>
+            <option value={"week-3"}>Week 3</option>
+            <option value={"week-2"}>Week 2</option>
+            <option value={"week-1"}>Week 1</option>
           </select>
         </div>
         <div className="text-white min-h-40 flex-grow">
-
-        <Table className="">
-          {/* <TableCaption>A table of previous time trial results.</TableCaption> */}
-          <TableHeader>
-            <TableRow className="border">
-              <TableHead className="text-lg md:text-xl">Pos</TableHead>
-              <TableHead className="w-content text-lg md:text-xl">Driver</TableHead>
-              <TableHead className="text-lg md:text-xl">Time</TableHead>
-              <TableHead className="w-content text-lg">PI</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody className="border text-xl">
-            <TableRow className="bg-green-400/40">
-              <TableCell className="font-medium">1</TableCell>
-              <TableCell>Pablo </TableCell>
-              <TableCell>01:24.546</TableCell>
-              <TableCell className="">700</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">2</TableCell>
-              <TableCell>Riley</TableCell>
-              <TableCell>01:24.785</TableCell>
-              <TableCell >699</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">3</TableCell>
-              <TableCell>Connor</TableCell>
-              <TableCell>01:25.006</TableCell>
-              <TableCell >700</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">3</TableCell>
-              <TableCell>Connor</TableCell>
-              <TableCell>01:25.006</TableCell>
-              <TableCell >700</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">3</TableCell>
-              <TableCell>Connor</TableCell>
-              <TableCell>01:25.006</TableCell>
-              <TableCell >700</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">3</TableCell>
-              <TableCell>Connor</TableCell>
-              <TableCell>01:25.006</TableCell>
-              <TableCell >700</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">3</TableCell>
-              <TableCell>Connor</TableCell>
-              <TableCell>01:25.006</TableCell>
-              <TableCell >700</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
+          <Table className="">
+            {/* <TableCaption>A table of previous time trial results.</TableCaption> */}
+            <TableHeader>
+              <TableRow className="border">
+                <TableHead className="text-lg md:text-xl">Pos</TableHead>
+                <TableHead className="w-content text-lg md:text-xl">
+                  Driver
+                </TableHead>
+                <TableHead className="text-lg md:text-xl">Time</TableHead>
+                <TableHead className="w-content text-lg">PI</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className="border text-xl">
+              <TableRow className="bg-green-400/40">
+                <TableCell className="font-medium">1</TableCell>
+                <TableCell>Pablo </TableCell>
+                <TableCell>01:24.546</TableCell>
+                <TableCell className="">700</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">2</TableCell>
+                <TableCell>Riley</TableCell>
+                <TableCell>01:24.785</TableCell>
+                <TableCell>699</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">3</TableCell>
+                <TableCell>Connor</TableCell>
+                <TableCell>01:25.006</TableCell>
+                <TableCell>700</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">3</TableCell>
+                <TableCell>Connor</TableCell>
+                <TableCell>01:25.006</TableCell>
+                <TableCell>700</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">3</TableCell>
+                <TableCell>Connor</TableCell>
+                <TableCell>01:25.006</TableCell>
+                <TableCell>700</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">3</TableCell>
+                <TableCell>Connor</TableCell>
+                <TableCell>01:25.006</TableCell>
+                <TableCell>700</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">3</TableCell>
+                <TableCell>Connor</TableCell>
+                <TableCell>01:25.006</TableCell>
+                <TableCell>700</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
         </div>
       </div>
     </>
