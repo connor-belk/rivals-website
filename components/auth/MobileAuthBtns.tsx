@@ -13,13 +13,13 @@ export default async function MobileAuthBtns() {
         <SignInBtn />
       </li>
     );
-  else
-    return (
-      <>
-        <li className="w-20 h-20 bg-slate-400 rounded-full cursor-pointer"></li>
-        <SignOutBtn />
-      </>
-    );
+
+  return (
+    <>
+      <li className="w-20 h-20 bg-slate-400 rounded-full cursor-pointer"></li>
+      <SignOutBtn />
+    </>
+  );
 }
 
 //   {

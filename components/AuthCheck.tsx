@@ -8,6 +8,8 @@ export default async function AuthCheck() {
   //   console.log("no session");
   // }
 
+  console.log("session", session);
+
   return (
     <>
       {session ? (

@@ -35,10 +35,12 @@ export default function Footer() {
             <Link href={"#"}>Account</Link>
           </li>
           <li>
-            <Link href={"#"}>Admin Page</Link>
+            <Link href={"/admin"}>Admin Page</Link>
           </li>
           <li>
-            <Link href={"#"}>Privacy Policy</Link>
+            <Link href={"/legal/privacy-policy"} prefetch>
+              Privacy Policy
+            </Link>
           </li>
         </ul>
         <ul className="self-center">

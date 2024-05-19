@@ -3,7 +3,7 @@ import Image from "next/image";
 import MobileMenu from "./MobileMenu";
 
 export default async function Navbar() {
-  const session = true; // This block for authorization is not yet implemented
+  // const session = true; // This block for authorization is not yet implemented
 
   return (
     <nav className="bg-slate-800 flex justify-between items-center px-5 py-6 text-slate-200">

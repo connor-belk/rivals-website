@@ -1,3 +1,6 @@
+import { prisma } from "@/lib/prisma";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+
 import NextAuth, { type DefaultSession } from "next-auth";
 import Discord from "next-auth/providers/discord";
 
@@ -9,6 +12,7 @@ declare module "next-auth" {
     user: {
       /** The user's postal address. */
       address: string;
+      isAdmin: boolean;
       /**
        * By default, TypeScript merges new interface properties and overwrites existing ones.
        * In this case, the default session user properties will be overwritten,
@@ -20,6 +24,7 @@ declare module "next-auth" {
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  adapter: PrismaAdapter(prisma),
   providers: [Discord],
   callbacks: {},
 });
