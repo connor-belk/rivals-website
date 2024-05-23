@@ -10,6 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Link from "next/link";
 
 const getAllUsers = async () => {
   const userArray = [];
@@ -48,6 +49,9 @@ export default async function AdminUsersPage() {
               ) : (
                 <TableCell>User</TableCell>
               )}
+              <TableCell>
+                <Link href={`/admin/users/${user.id}`}>Edit</Link>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
