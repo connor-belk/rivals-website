@@ -36,6 +36,8 @@ export default async function AdminUsersPage() {
           <TableRow>
             <TableCell>Username</TableCell>
             <TableCell>Email</TableCell>
+            <TableCell>Age</TableCell>
+            <TableCell>Points</TableCell>
             <TableCell>Role</TableCell>
           </TableRow>
         </TableHeader>
@@ -44,13 +46,20 @@ export default async function AdminUsersPage() {
             <TableRow key={user.id}>
               <TableCell>{user.name}</TableCell>
               <TableCell>{user.email}</TableCell>
+              <TableCell>{user.age}</TableCell>
+              <TableCell>{user.points}</TableCell>
               {user.isAdmin ? (
                 <TableCell>Admin</TableCell>
               ) : (
                 <TableCell>User</TableCell>
               )}
               <TableCell>
-                <Link href={`/admin/users/${user.id}`}>Edit</Link>
+                <Link
+                  href={`/admin/users/${user.id}`}
+                  className="bg-yellow-300 text-black font-bold px-4 py-1 rounded-xl"
+                >
+                  Edit
+                </Link>
               </TableCell>
             </TableRow>
           ))}
