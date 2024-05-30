@@ -28,12 +28,14 @@ export default function AddSeasonForm(seasonData: any) {
         "Content-Type": "application/json",
       },
     });
+
+    console.log(await res.json());
   };
   return (
     <Dialog>
       <DialogTrigger asChild>
         <button className="text-white px-6 py-2 border border-white rounded-xl hover:bg-slate-800 transition-all duration-150">
-          Edit Profile
+          Add Season
         </button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-gray-900 border border-gray-600 rounded-xl">
@@ -67,12 +69,14 @@ export default function AddSeasonForm(seasonData: any) {
             className="col-span-3 px-2 py-1"
             placeholder="Optional description..."
           />
-          <button
-            type="submit"
-            className="text-white px-6 py-2 border border-white rounded-xl hover:bg-slate-800 transition-all duration-150 col-start-4"
-          >
-            Save
-          </button>
+          <DialogTrigger asChild>
+            <button
+              type="submit"
+              className="text-white px-6 py-2 border border-white rounded-xl hover:bg-slate-800 transition-all duration-150 col-start-4"
+            >
+              Save
+            </button>
+          </DialogTrigger>
         </form>
       </DialogContent>
     </Dialog>
