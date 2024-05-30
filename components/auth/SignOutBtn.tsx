@@ -1,5 +1,4 @@
 import { signOut } from "@/auth";
-import { redirect } from "next/navigation";
 
 export default function SignOutBtn() {
   return (
@@ -14,7 +13,7 @@ export default function SignOutBtn() {
     >
       <button
         type="submit"
-        className="text-3xl px-6 py-2 font-medium md:px-4 rounded-xl bg-red-500/70 md:font-bold md:hover:scale-105 md:transition-all md:duration-150"
+        className="text-white px-6 py-2 font-thin text-3xl border-white md:text-lg md:px-4 md:py-1 rounded-xl md:font-medium md:border-2 md:border-red-500/50 md:hover:border-transparent md:hover:bg-red-500/50 md:transition-all md:duration-150"
       >
         Sign Out
       </button>
