@@ -42,7 +42,7 @@ export default function AddSeasonForm(seasonData: any) {
         <DialogHeader>
           <DialogTitle>Add Season</DialogTitle>
           <DialogDescription>
-            Add a season here. Click save when you're done.
+            Add a season here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
         <form
