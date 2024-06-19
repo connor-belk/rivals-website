@@ -43,7 +43,9 @@ const SeasonTile = ({ season }: { season: any }) => {
 
     if (res.ok) {
       toast.success("Season updated!");
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
     } else {
       toast.error("Failed to update season!");
     }
@@ -66,6 +68,15 @@ const SeasonTile = ({ season }: { season: any }) => {
         "Content-Type": "application/json",
       },
     });
+
+    if (res.ok) {
+      toast.success("Season deleted!");
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    } else {
+      toast.error("Failed to delete season!");
+    }
   };
 
   const date = new Date(season.startsAt);
