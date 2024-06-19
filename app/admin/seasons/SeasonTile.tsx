@@ -103,7 +103,9 @@ const SeasonTile = ({ season }: { season: any }) => {
       />
       <Dialog>
         <DialogTrigger asChild>
-          <MdEdit className="absolute top-5 right-14 text-yellow-500 text-2xl cursor-pointer hover:scale-125 transition-all duration-150" />
+          <p>
+            <MdEdit className="absolute top-5 right-14 text-yellow-500 text-2xl cursor-pointer hover:scale-125 transition-all duration-150" />
+          </p>
         </DialogTrigger>
         <DialogContent className="bg-black text-white [&&]:rounded-xl">
           <DialogHeader>
