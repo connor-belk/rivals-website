@@ -1,29 +1,22 @@
 import { prisma } from "@/lib/prisma";
 import AddSeasonForm from "./AddSeasonForm";
+import SeasonTile from "./SeasonTile";
 
-const getAllSeasons = async () => {
-  const seasonArray = [];
-  console.log("Fetching seasons...");
+const getSeasons = async () => {
   const seasons = await prisma.season.findMany();
-  for (const season in seasons) {
-    seasonArray.push(seasons[season]);
-  }
-  console.log("Fetched seasons!");
-  return seasonArray;
+  return seasons;
 };
 
 const SeasonsPage = async () => {
-  const seasons = await getAllSeasons();
+  const seasons = await getSeasons();
+
   return (
-    <div>
-      <h1 className="text-white">Seasons</h1>
+    <div className="text-white mt-5">
+      <h1 className="text-center text-3xl">Seasons</h1>
       <AddSeasonForm />
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
         {seasons.map((season) => (
-          <div key={season.id} className="text-white">
-            <h2>{season.name}</h2>
-            <p>{season.description || "No description yet."}</p>
-          </div>
+          <SeasonTile key={season.id} season={season} />
         ))}
       </div>
     </div>

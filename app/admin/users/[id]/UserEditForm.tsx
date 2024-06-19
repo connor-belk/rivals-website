@@ -50,7 +50,7 @@ export default function UserEditForm({ userData }: any) {
             type="number"
             name="age"
             id="age"
-            defaultValue={userData.age.toString()}
+            defaultValue={userData.age}
             className="text-black px-4 py-2 rounded-xl"
           />
         </div>
