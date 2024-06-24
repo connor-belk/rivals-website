@@ -1,4 +1,6 @@
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 import AddSeasonForm from "./AddSeasonForm";
 import SeasonTile from "./SeasonTile";
 
@@ -8,6 +10,9 @@ const getSeasons = async () => {
 };
 
 const SeasonsPage = async () => {
+  const session = await auth();
+  if (!session) redirect("/login");
+  if (!session.user.isAdmin) throw new Error("Unauthorized");
   const seasons = await getSeasons();
 
   return (

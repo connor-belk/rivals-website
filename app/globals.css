@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 217.78, 19.71%, 26.86%;
+}
+
 html,
 body {
   /* height: fit-content; */

@@ -1,4 +1,6 @@
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 import Image from "next/image";
 import Loader from "@/components/utils/Loader";
 import {
@@ -25,6 +27,9 @@ const getAllUsers = async () => {
 
 export default async function AdminUsersPage() {
   const userData = await getAllUsers();
+  const session = await auth();
+  if (!session) redirect("/login");
+  if (!session.user.isAdmin) throw new Error("Unauthorized");
 
   if (!userData) {
     return <div>Loading...</div>;

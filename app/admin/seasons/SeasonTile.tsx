@@ -118,7 +118,7 @@ const SeasonTile = ({ season }: { season: any }) => {
             onSubmit={patchSeason}
             className="grid grid-cols-2 grid-rows-4 gap-2"
           >
-            <label htmlFor="">Title</label>
+            <label htmlFor="name">Title</label>
             <input
               type="text"
               name="name"
@@ -126,7 +126,7 @@ const SeasonTile = ({ season }: { season: any }) => {
               defaultValue={season.name}
               className="bg-inherit px-4 py-2 rounded-xl border"
             />
-            <label htmlFor="">Start Date &#40;UTC&#41;</label>
+            <label htmlFor="startsAt">Start Date &#40;UTC&#41;</label>
             <input
               type="datetime-local"
               name="startsAt"
@@ -137,7 +137,7 @@ const SeasonTile = ({ season }: { season: any }) => {
               className="bg-inherit px-4 py-2 rounded-xl border"
             />
             {/* <p>{#}</p> */}
-            <label htmlFor="">End Date &#40;UTC&#41;</label>
+            <label htmlFor="endsAt">End Date &#40;UTC&#41;</label>
             <input
               type="datetime-local"
               name="endsAt"
