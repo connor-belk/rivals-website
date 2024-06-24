@@ -60,7 +60,10 @@ export default function CookiesPage() {
         </p>
       </section>
       <div className="w-full text-center mt-4">
-        <Link href={"/legal/cookies"} className="underline w-full text-center">
+        <Link
+          href={"/legal/privacy-policy"}
+          className="underline w-full text-center"
+        >
           Click here to see our Privacy Policy
         </Link>
       </div>
