@@ -2,9 +2,12 @@ import { auth } from "@/auth";
 import { FaDiscord } from "react-icons/fa6";
 import SignOutBtn from "./SignOutBtn";
 import SignInBtn from "./SignInBtn";
+import Link from "next/link";
+import Image from "next/image";
 
 export default async function MobileAuthBtns() {
   const session = await auth();
+  const userImageUrl = session?.user.image;
 
   if (!session)
     return (
@@ -16,7 +19,16 @@ export default async function MobileAuthBtns() {
 
   return (
     <>
-      <li className="w-20 h-20 bg-slate-400 rounded-full cursor-pointer"></li>
+      <li className="w-24 h-24 bg-slate-400 rounded-full cursor-pointer overflow-hidden">
+        <Link href={"/dashboard"}>
+          <Image
+            src={userImageUrl || "/profile.jpg"}
+            alt="profile image"
+            height={200}
+            width={200}
+          />
+        </Link>
+      </li>
       <SignOutBtn />
     </>
   );

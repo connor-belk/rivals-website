@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SignInBtn from "./auth/SignInBtn";
 import MobileSlider from "./MobileSlider";
 import { auth } from "@/auth";
@@ -6,7 +7,8 @@ import SignOutBtn from "./auth/SignOutBtn";
 import MobileAuthBtns from "./auth/MobileAuthBtns";
 
 export default async function MobileMenu() {
-  const session = await auth(); // This block for authorization is not yet implemented
+  const session = await auth();
+  const userImageUrl = session?.user.image;
 
   return (
     <>
@@ -32,7 +34,16 @@ export default async function MobileMenu() {
           </li>
           {session ? (
             <>
-              <li className="w-10 h-10 bg-slate-400 rounded-full cursor-pointer"></li>
+              <li className="w-10 h-10 bg-slate-400 rounded-full cursor-pointer overflow-hidden">
+                <Link href={"/dashboard"}>
+                  <Image
+                    src={userImageUrl || "/profile.jpg"}
+                    alt="profile image"
+                    height={200}
+                    width={200}
+                  />
+                </Link>
+              </li>
               <SignOutBtn />
             </>
           ) : (
