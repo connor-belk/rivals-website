@@ -2,7 +2,7 @@ import NavButtonHome from "@/components/NavButtonHome";
 
 export default function Home() {
   return (
-    <main className="flex flex-col max-h-[40rem] md:flex-row gap-1">
+    <main className="flex flex-col my-auto md:flex-row gap-1">
       <NavButtonHome title="Rivals" navigation="rivals" image="rivals-bg.jpg" />
 
       <NavButtonHome
